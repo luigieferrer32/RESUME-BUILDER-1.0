@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Education";
+}
+
+@{ Html.RenderAction("EducationPartial", "Resume"); }
+
+@section scripts {
+
+    <script type="text/javascript">
+        //AddOrUpdate Education
+
+        $('#AddOrUpdateEducation').on('click', function () {
+
+                var serializeModel = {
+
+                    ID: $('#ID').val(),
+                    School_Name: $('#School_Name').val(),
+                    School_Location: $('#School_Location').val(),
+                    Field_Of_Study: $('#Field_Of_Study').val(),
+                    Graduation_Year: $('#Graduation_Year').val(),
+                   
+                };
+                console.log(JSON.stringify(serializeModel));
+
+                $.ajax({
+
+                    url: '@Url.Action("AddOrUpdateEducation", "Resume")',
+                    type: 'POST',
+                    data: { education: serializeModel },
+                    success: function (response) {
+                        alert(response.data);
+                    },
+                    error: function (error) {
+                        alert(error.data);
+                    }
+                });
+
+            });
+
+
+
+       
+    </script>
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

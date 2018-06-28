@@ -1,0 +1,65 @@
+﻿@model ResumeBuilder.ViewModel.EducationVM
+
+<style type="text/css">
+    .row {
+        margin-bottom: 25px;
+    }
+
+    .IconTitle {
+        border: 3px solid #e0e0e0;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        background-color: #5cb85c;
+    }
+</style>
+
+<div class="container">
+    <form>
+        <div class="panel-body">
+
+            <div class="row">
+
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.School_Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Institute/University" } })
+                    @Html.ValidationMessageFor(model => model.School_Name, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.School_Location, new { htmlAttributes = new { @class = "form-control", @placeholder = "Title Of Diploma" } })
+                    @Html.ValidationMessageFor(model => model.School_Name, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+
+                    @Html.DropDownListFor(model => model.Degree, Model.ListofDegree, new { @class = "form-control" })
+
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.Degree, new { htmlAttributes = new { @class = "form-control", @placeholder = "Degree" } })
+                    @Html.ValidationMessageFor(model => model.School_Name, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.Field_Of_Study, new { htmlAttributes = new { @class = "form-control", @placeholder = "Field of Study" } })
+                    @Html.ValidationMessageFor(model => model.Field_Of_Study, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-xs-6">
+                    @Html.EditorFor(model => model.Graduation_Year, new { htmlAttributes = new { @class = "form-control", @placeholder = "Graduation Year" } })
+                    @Html.ValidationMessageFor(model => model.Graduation_Year, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="AddOrUpdateEducation" class="btn" style="background-color: #e066ff; color:#FFF;"> <span class="glyphicon glyphicon-book" aria-hidden="true"></span>  Add Work Experience </button>
+
+        <a href="@Url.Action("SkiCerfLang","Resume")" class="btn" style="position: relative; right: -50%; color:#FFF; background-color: #e066ff"> Next Step>> Skills </a>
+
+    </form>
+</div>

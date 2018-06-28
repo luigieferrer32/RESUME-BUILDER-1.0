@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "Pricing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<!--
+    Aesthetic by gettemplates.co
+    Twitter: http://twitter.com/gettemplateco
+    URL:
+-->
+<html>
+<head>
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="~/images/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.7.1-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="~/css/hero.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href=@Url.Content("~/css/style.css")>
+
+</head>
+<body>
+
+    <div class=" gtco-heading text-center">
+
+        <h2 class="title">Create a resume you're proud of</h2>
+        <p class="subtitle">Stand out with a visual resume that highlights the key things about you and shows you're relevant.</p>
+    </div>
+    <section class="container text-center">
+        <div class="sandbox">
+            <div class="tile is-ancestor ">
+                <div class="tile is-parent is-shady " style="outline-color:gray; outline-style:solid">
+                    <article class="tile is-child text-center bg-info">
+                        <h1 class="h1 is-dark">Monthly</h1>
+                        <h2 class="h2">$19<sup>.99/m</sup></h2>
+                        <p class="subtitle">You will be billed <br />once in a month</p>
+                        <a href="" class="button is-danger is-large is-outlined active" role="button" aria-pressed="true">Buy Pro Monthly</a><br /><br />
+                        <p class="subtitle text-center">UPGRADE ANYTIME</p>
+                    </article>
+                </div>
+                <div class="tile is-parent is-shady" style="outline-color: coral; outline-style:solid">
+                    <article class="tile is-child text-center">
+                        <div class="tab center-tab text-center">
+                            <div class="center-tab-header bg-danger">
+                                <p class="title">MOST POPULAR</p>
+                            </div>
+                        </div>
+                        <h1 class="h1">Quarterly</h1>
+                        <h2 class="subtitle">$14<sup>.99/m</sup></h2>
+                        <p class="subtitle"><strike>$59.97</strike> $44.97 <br />billed every 3 months</p>
+
+                        <a href="" class="btn btn-primary btn-md  active" role="button" aria-pressed="true">Buy Pro Quarterly</a><br />
+                        <p class="subtitle">SAVE 25%</p>
+                    </article>
+                </div>
+                <div class="tile is-parent is-shady " style="outline-color:gray; outline-style:solid">
+                    <article class="tile is-child bg-info text-center">
+                        <h1 class="h1">Semi-Annual</h1>
+                        <h2 class="subtitle">$10<sup>.99/m</sup></h2>
+                        <p class="subtitle"><strike>$119.94</strike> $65.94 <br />billed every 6 months</p>
+                        <a href="" class="button is-danger is-large is-outlined active" role="button" aria-pressed="true">Buy Pro Semi-Annual</a><br /><br />
+                        <p class="subtitle text-center">SAVE 45%</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class=" gtco-heading text-center">
+            <h2 class="title">What’s included in Pro</h2>
+        </div>
+
+        <section class="column">
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical is-8">
+                    <div class="tile">
+                        <div class="tile is-parent is-vertical is-shady">
+                            <article class="tile is-child notification is-primary">
+                                <p class="title">Up to 10 resumes</p>
+                                <p class="subtitle">Make changes to your resume and tailor to a specific position in a matter of minutes.</p>
+                            </article>
+                            <article class="tile is-child notification is-warning">
+                                <p class="title">
+                                    Unlimited entries
+                                </p>
+                                <p class="subtitle">Add more of your personal and professional experience to prove your culture fit.</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification is-info is-shady">
+                                <p class="title">
+                                    Pro sections
+                                </p>
+                                <p class="subtitle">Show certificates, awards, references, and more, so that your achievements come across.</p>
+
+                            </article>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-danger  is-shady">
+
+                            <p class="title">Memorable design</p>
+                            <p class="subtitle">Customize colors, fonts, and icons and make sure your resume is never bland.</p>
+                            <div class="content">
+
+                            </div>
+                        </article>
+                        <div style="margin-right:50px"></div>
+                        <article class="tile is-child notification is-danger  is-shady">
+                            <p class="title">Remove branding</p>
+                            <p class="subtitle">Get the full credit for your resume by removing the Enhancv logo on the page.</p>
+                            <div class="content">
+
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child notification is-success  is-shady">
+                        <div class="content">
+                            <p class="title">
+                                Compact template
+                            </p>
+                            <p class="subtitle">
+                                Use a visually appealing layout that fits more information in one page.
+                            </p>
+                            <div class="content">
+                                <!-- Content -->
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src=@Url.Content("~/js/jquery.min.js")></script>
+    <!-- jQuery Easing -->
+    <script src=@Url.Content("~/js/jquery.easing.1.3.js")></script>
+    <!-- Bootstrap -->
+    <script src=@Url.Content("~/js/bootstrap.min.js")></script>
+    <!-- Waypoints -->
+    <script src=@Url.Content("~/js/jquery.waypoints.min.js")></script>
+    <!-- Carousel -->
+    <script src=@Url.Content("~/js/owl.carousel.min.js")></script>
+    <!-- Magnific Popup -->
+    <script src=@Url.Content("~/js/jquery.magnific-popup.min.js")></script>
+    <script src=@Url.Content("~/js/magnific-popup-options.js")></script>
+    <!-- Main -->
+    <script src=@Url.Content("~/js/main.js")></script>
+
+</body>
+</html>

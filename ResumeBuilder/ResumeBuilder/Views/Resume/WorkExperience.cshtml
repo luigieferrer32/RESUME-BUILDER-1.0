@@ -1,0 +1,46 @@
+﻿@using System.Web.Optimization
+@{
+    ViewBag.Title = "WorkExperience";
+}
+
+<h2>WorkExperience</h2>
+@{ Html.RenderAction("WorkExperiencePartial", "Resume"); }
+@section Scripts {
+
+    <script type="text/javascript">
+
+        //AddOrUpdate Work Experience
+
+        $('#AddOrUpdateExperience').on('click', function () {
+
+            var serializeModel = {
+
+                
+                Job_Title: $('#Job_Title').val(),
+                Employer: $('#Employer').val(),
+                City: $('#City').val(),
+                Start_Month: $('#Start_Month').val(),
+                Start_Year: $('#Start_Year').val(),
+                End_Month: $('#End_Month').val(),
+                End_Year: $('#End_Year').val()
+            };
+            console.log(JSON.stringify(serializeModel));
+
+            $.ajax({
+
+                url: '@Url.Action("AddOrUpdateExperience", "Resume")',
+                type: 'POST',
+                data: { workExperience: serializeModel },
+                success: function (response) {
+                    alert(response.data);
+                },
+                error: function (error) {
+                    alert(error.data);
+                }
+            });
+
+        });
+
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

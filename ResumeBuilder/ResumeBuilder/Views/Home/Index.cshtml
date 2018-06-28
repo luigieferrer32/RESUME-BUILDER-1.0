@@ -1,0 +1,486 @@
+﻿
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cube &mdash; </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href=@Url.Content("~/css/animate.css")>
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href=@Url.Content("~/css/icomoon.css")>
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href=@Url.Content("~/css/themify-icons.css")>
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href=@Url.Content("~/css/bootstrap.css")>
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href=@Url.Content("~/css/magnific-popup.css")>
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href=@Url.Content("~/css/owl.carousel.min.css")>
+    <link rel="stylesheet" href=@Url.Content("~/css/owl.theme.default.min.css")>
+    <!-- Theme style  -->
+    <link rel="stylesheet" href=@Url.Content("~/css/style.css")>
+    <!-- Modernizr JS -->
+    <script src=@Url.Content("~/js/modernizr-2.6.2.min.js")></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div>
+        <div id="page">
+            <nav class="gtco-nav" role="navigation">
+                <div class="gtco-container">
+
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-12">
+                            <div id="gtco-logo"><a href=@Url.Action("Index", null, new { area = string.Empty, controller = "Home" })><img src=@Url.Content("~/images/rsz_1resume_builder-01.jpg") alt="img HTML5 img"></a></div>
+                        </div>
+                        <div class="col-xs-10 text-right menu-1">
+                            <ul>
+                                <li><a href=@Url.Action("Index", null, new { area = string.Empty, controller = "Home" })>Home</a></li>
+                                <li><a href=@Url.Action("SuccessfulResume", null, new { area = string.Empty, controller = "Home" })>Successful Resume</a></li>
+                                <li>
+                                    <a href=@Url.Action("Pricing", null, new { area = string.Empty, controller = "Home" })>Pricing</a>
+                                </li>
+                                @*<li><a href=@Url.Action("Login", null, new { area = string.Empty, controller = "Login" })>Sign-in</a></li>*@
+
+                                <li><a href="#">Blogs/News Page</a></li>
+                               
+                            </ul>
+                            <div>@Html.Partial("_LoginPartial")</div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            <header id="gtco-header" class="gtco-cover" role="banner">
+                <div class="gtco-container">
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-0 text-left">
+                            <div class="display-t">
+                                <div class="display-tc">
+                                    <div class="row">
+                                        <div class="col-md-5 text-center header-img">
+                                            <img src=@Url.Content("~/images/rsz_resume_builder-01transBig.png") alt="img">
+                                        </div>
+                                        <div class="col-md-7 copy">
+                                            <h1>Your Resume, Made Easy</h1>
+                                            <p>Stand out and make sure the key things come across</p>
+                                            <p><a href="" target="_blank" class="btn btn-white">CREATE RESUME</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="gtco-client">
+                <div class="gtco-container">
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-1 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+                            <img src=@Url.Content("~/images/client_1.png") alt="img" class="img-responsive">
+                        </div>
+                        <div class="col-md-2 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+                            <img src=@Url.Content("~/images/client_2.png") alt="img" class="img-responsive">
+                        </div>
+                        <div class="col-md-2 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+                            <img src=@Url.Content("~/images/client_3.png") alt="img" class="img-responsive">
+                        </div>
+                        <div class="col-md-2 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+                            <img src=@Url.Content("~/images/client_4.png") alt="img" class="img-responsive">
+                        </div>
+                        <div class="col-md-2 text-center client col-sm-6 col-xs-6 col-xs-offset-0 col-sm-offset-0">
+                            <img src=@Url.Content("~/images/client_5.png") alt="img" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END .gtco-client -->
+            
+            <div class="gtco-services gtco-section">
+                <div class="gtco-container">
+                    <div class="row row-pb-sm">
+                        <div class="col-md-8 col-md-offset-2 gtco-heading text-center">
+                            <h2>
+                                A resume that simply stands out
+                            </h2>
+                            <p>
+                                90% of applicants use a word-editing software and traditional templates.
+                                Don’t rely on a bland resume - get the recruiter’s attention with a visually appealing format.
+                            </p>
+                            <p><a href="" class="btn btn-special popup-vimeo">Watch The Video</a></p>
+                        </div>
+                    </div>
+                    <div class="row row-pb-md">
+                        <div class="col-md-4 col-sm-4 service-wrap">
+                            <div class="service">
+                                <h3><i class="ti-pie-chart"></i> Balance the personal and the professional</h3>
+                                <p>Showcase personal strengths and key drivers in addition to your skills to demonstrate culture fit.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 service-wrap">
+                            <div class="service animate-change">
+                                <h3><i class="ti-ruler-pencil"></i>Simple editing</h3>
+                                <p>Make changes straight on the page and see a preview of the resume without downloading it.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 service-wrap">
+                            <div class="service">
+                                <h3><i class="ti-settings"></i> No learning curve</h3>
+                                <p>Each step of building your resume is so natural, you don’t have to figure things out on your own.</p>
+                            </div>
+                        </div>
+                        <div class="clearfix visible-md-block visible-sm-block"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- END .gtco-services -->
+            <div class="gtco-section gtco-products">
+                <div class="gtco-container">
+                    <div class="row row-pb-sm">
+                        <div class="col-md-8 col-md-offset-2 gtco-heading text-center">
+                            <h2>Successful Resume</h2>
+                            <p>
+                                Your Perfect Resume
+                                Is Waiting For You
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-14">
+                            <div class="owl-carousel owl-carousel-carousel">
+                                <div class="item">
+                                    <div class="gtco-item">
+                                        <a href="#" class="gtco-item one-row bg-img animate-box" style="  background-image: url('../../images/Resume/angela-merkel-resume-1.jpg');
+">
+                                            <div class="overlay">
+                                                <i class="ti-arrow-top-right"></i>
+                                                <div class="copy">
+                                                    <h3>
+                                                        Angela Merkel
+                                                    </h3>
+                                                    <p>The most powerful woman in the world deserves a resume that really leaves an impression.</p>
+                                                </div>
+                                            </div>
+                                            <img src=@Url.Content("~/images/img_1.jpg") class="hidden" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gtco-item">
+                                        <a href="#" class="gtco-item one-row bg-img animate-box" style="  background-image: url('../../images/Resume/barack-obama-resume.jpg');">
+                                            <div class="overlay">
+                                                <i class="ti-arrow-top-right"></i>
+                                                <div class="copy">
+                                                    <h3>
+                                                        barack Obama
+                                                    </h3>
+                                                    <p>It takes a special kind of one page resume to show Barack Obama’s political career.</p>
+                                                </div>
+                                            </div>
+                                            <img src=@Url.Content("~/images/img_1.jpg") class="hidden" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gtco-item">
+                                        <a href="#" class="gtco-item one-row bg-img animate-box" style="  background-image: url('../../images/Resume/hillary-clinton-resume-1.jpg');">
+                                            <div class="overlay">
+                                                <i class="ti-arrow-top-right"></i>
+                                                <div class="copy">
+                                                    <h3>
+                                                        Hilary Clinton
+                                                    </h3>
+                                                    <p>Even when you’re as famous as Clinton, the right resume can still surprise.</p>
+                                                </div>
+                                            </div>
+                                            <img src=@Url.Content("~/images/img_1.jpg") class="hidden" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gtco-item">
+                                        <a href="#" class="gtco-item one-row bg-img animate-box" style="  background-image: url('../../images/Resume/marissa-mayer-resume.jpg');">
+                                            <div class="overlay">
+                                                <i class="ti-arrow-top-right"></i>
+                                                <div class="copy">
+                                                    <h3>
+                                                        Marissa Mayer
+                                                    </h3>
+                                                    <p>Marissa’s resume shows her rise to become a major tech company CEO.</p>
+                                                </div>
+                                            </div>
+                                            <img src=@Url.Content("~/images/img_1.jpg") class="hidden" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gtco-item">
+                                        <a href="#" class="gtco-item one-row bg-img animate-box" style="  background-image: url('../../images/Resume/mark-zuckerberg-resume.jpg');">
+                                            <div class="overlay">
+                                                <i class="ti-arrow-top-right"></i>
+                                                <div class="copy">
+                                                    <h3>
+                                                        Mark Zuckerberg
+                                                    </h3>
+                                                    <p>Showing him at the moment he founded Facebook, Zuckerberg’s resume shows a college student who knows how to show projects and impact.</p>
+                                                </div>
+                                            </div>
+                                            <img src=@Url.Content("~/images/img_1.jpg") class="hidden" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gtco-item">
+                                        <a href="#" class="gtco-item one-row bg-img animate-box" style="  background-image: url('../../images/Resume/sheryl-sandberg-resume-1.jpg');">
+                                            <div class="overlay">
+                                                <i class="ti-arrow-top-right"></i>
+                                                <div class="copy">
+                                                    <h3>
+                                                        Sheryl Sandberg
+                                                    </h3>
+                                                    <p>Sandberg’s resume shows how she can be a COO, mother, and author.</p>
+                                                </div>
+                                            </div>
+                                            <img src=@Url.Content("~/images/img_1.jpg") class="hidden" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                        </div>
+
+                    </div>
+
+                    @*
+                        <div class="row row-pb-md">
+                        <div class="col-md-4 col-sm-4">
+                            <a href="#" class="gtco-item one-row bg-img animate-box" style="  background-image: url('../../images/Resume/angela-merkel-resume-1.jpg');
+">
+                                <div class="overlay">
+                                    <i class="ti-arrow-top-right"></i>
+                                    <div class="copy">
+                                        <h3>
+                                            Angela Merkel
+                                        </h3>
+                                        <p>The most powerful woman in the world deserves a resume that really leaves an impression.</p>
+                                    </div>
+                                </div>
+                                <img src=@Url.Content("~/images/img_1.jpg") class="hidden" alt="img">
+                            </a>
+                            <a href="#" class="gtco-item two-row bg-img animate-box" style="background-image: url('../../images/img_2.jpg')">
+                                <div class="overlay">
+                                    <i class="ti-arrow-top-right"></i>
+                                    <div class="copy">
+                                        <h3>Notepad Mockup</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                                <img src=@Url.Content("~/images/img_2.jpg") class="hidden" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <a href="#" class="gtco-item one-row bg-img animate-box" style="background-image: url('../../images/img_md_1.jpg')">
+                                <div class="overlay">
+                                    <i class="ti-arrow-top-right"></i>
+                                    <div class="copy">
+                                        <h3>Paper Pouch</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                                <img src=@Url.Content("~/images/img_md_1.jpg") class="hidden" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <a href="#" class="gtco-item two-row bg-img animate-box" style="background-image: url('../../images/img_3.jpg')">
+                                <div class="overlay">
+                                    <i class="ti-arrow-top-right"></i>
+                                    <div class="copy">
+                                        <h3>Fancy 3D</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                                <img src=@Url.Content("~/images/img_3.jpg") class="hidden" alt="img">
+                            </a>
+                            <a href="#" class="gtco-item two-row bg-img animate-box" style="background-image: url('../../images/img_4.jpg')">
+                                <div class="overlay">
+                                    <i class="ti-arrow-top-right"></i>
+                                    <div class="copy">
+                                        <h3>Hard Cover Book</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                                <img src=@Url.Content("~/images/img_4.jpg") class="hidden" alt="img HTML5 img">
+                            </a>
+                        </div>
+                    </div>*@
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p><a href="" target="_blank" class="btn btn-special">GET STARTED</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END .gtco-products -->
+            <div class="gtco-section gtco-testimonial gtco-gray">
+                <div class="gtco-container">
+                    <div class="row row-pb-sm">
+                        @*<div class="col-md-8 col-md-offset-2 gtco-heading text-center">
+                            <h2>People Love Us</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                        </div>*@
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 animate-box">
+                            <div class="gtco-testimony gtco-left">
+                                <div><img src=@Url.Content("~/images/54cae79f51277_-_fa-percent20porsche.jpg") alt="img img"></div>
+                                <blockquote>
+                                    <p>&ldquo;Design must be functional and functionality must be translated into visual aesthetics, without any reliance on gimmicks that have to be explained.&rdquo; <cite class="author">&mdash; Ferdinand A. Porsche</cite></p>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 animate-box">
+                            <div class="gtco-testimony gtco-left">
+                                <div><img src=@Url.Content("~/images/1200px-Steve_Jobs_Headshot_2010-CROP.jpg") alt="img img"></div>
+                                <blockquote>
+                                    <p>&ldquo;Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while.&rdquo; <cite class="author">&mdash; Steve Jobs</cite></p>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 animate-box">
+                            <div class="gtco-testimony gtco-left">
+                                <div><img src=@Url.Content("~/images/download.jpg") alt="img "></div>
+                                <blockquote>
+                                    <p>&ldquo;I think design would be better if designers were much more skeptical about its applications. If you believe in the potency of your craft, where you choose to dole it out is not something to take lightly.&rdquo; <cite class="author">&mdash; Frank Chimero</cite></p>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                       
+                        <div class="col-md-6 col-sm-6 animate-box">
+                            <div class="gtco-testimony gtco-left">
+                                <div><img src=@Url.Content("~/images/XpgonN0X_400x400.jpg") alt="img img"></div>
+                                <blockquote>
+                                    <p>
+                                        &ldquo;Your most unhappy customers are your greatest source of learning.
+                                        Success is a lousy teacher. It seduces smart people into thinking they can't lose.
+                                        Life is not fair; get used to it..&rdquo; <cite class="author">&mdash; Bill Gates</cite>
+                                    </p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="gtco-footer" class="gtco-section" role="contentinfo">
+            <div class="gtco-container">
+                <div class="row row-pb-md">
+                    <div class="col-md-8 col-md-offset-2 gtco-cta text-center">
+                        <h3>We Love To Talk About Your Business</h3>
+                        <p><a href=@Url.Action("ContactUs", null, new { area = string.Empty, controller = "Home" }) class="btn btn-white btn-outline">Contact Us</a></p>
+                    </div>
+                </div>
+                <div class="row row-pb-md">
+                    <div class="col-md-4 gtco-widget gtco-footer-paragraph">
+                        <h3>Resume Builder</h3>
+                        <p>Not happy with your current resume?</p>
+                    </div>
+                    <div class="col-md-4 gtco-footer-link">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="gtco-list-link">
+                                    <li><a href=@Url.Action("Index", null, new { area = string.Empty, controller = "Home" })>Home</a></li>
+                                    <li><a href=@Url.Action("SuccessfulResume", null, new { area = string.Empty, controller = "Home" })>Successful Resume</a></li>
+                                    <li><a href=@Url.Action("Pricing", null, new { area = string.Empty, controller = "Home" })>Pricing</a></li>
+                                    <li><a href=@Url.Action("Login", null, new { area = string.Empty, controller = "Login" })>Sign-In</a></li>
+                                    <li><a href="#">Blogs/News Page</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <a href="tel://1234567890">+1 234 4565 2342</a> <br>
+                                    <a href="#">info@domain.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gtco-footer-subscribe">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control" id="" placeholder="Email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="gtco-copyright">
+                <div class="gtco-container">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <p><small>&copy; 2018. All rights reserved. </small></p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <p><small>Made with love by people who care.</a></small> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+        <div class="gototop js-top">
+            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+        </div>
+
+        <!-- jQuery -->
+        <script src=@Url.Content("~/js/jquery.min.js")></script>
+        <!-- jQuery Easing -->
+        <script src=@Url.Content("~/js/jquery.easing.1.3.js")></script>
+        <!-- Bootstrap -->
+        <script src=@Url.Content("~/js/bootstrap.min.js")></script>
+        <!-- Waypoints -->
+        <script src=@Url.Content("~/js/jquery.waypoints.min.js")></script>
+        <!-- Carousel -->
+        <script src=@Url.Content("~/js/owl.carousel.min.js")></script>
+        <!-- Magnific Popup -->
+        <script src=@Url.Content("~/js/jquery.magnific-popup.min.js")></script>
+        <script src=@Url.Content("~/js/magnific-popup-options.js")></script>
+        <!-- Main -->
+        <script src=@Url.Content("~/js/main.js")></script>
+</body>
+</html>

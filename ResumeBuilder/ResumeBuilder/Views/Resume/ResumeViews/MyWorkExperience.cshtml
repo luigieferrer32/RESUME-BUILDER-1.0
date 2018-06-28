@@ -1,0 +1,60 @@
+﻿@model ResumeBuilder.ViewModel.WorkExperienceVM
+@{
+    ViewBag.Title = "MyWorkExperience";
+}
+
+<h2>MyWorkExperience</h2>
+
+<div class="row">
+
+    <div class="col-md-6">
+        @Html.EditorFor(model => model.Job_Title, new { htmlAttributes = new { @class = "form-control", @placeholder = "Job Title" } })
+        @Html.ValidationMessageFor(model => model.Job_Title, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="col-md-6">
+        @Html.EditorFor(model => model.Employer, new { htmlAttributes = new { @class = "form-control", @placeholder = "Employer" } })
+        @Html.ValidationMessageFor(model => model.Employer, "", new { @class = "text-danger" })
+    </div>
+
+</div>
+<div class="row">
+
+    <div class="col-md-6">
+
+        @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control", @placeholder = "City" } })
+        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="col-md-6">
+        @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control", @placeholder = "State" } })
+        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label>Start Month</label>
+            @Html.DropDownListFor(model => model.Start_Month, Model.ListStartMonth, "-- Select Month --", new { @class = "col-l-6" })
+        </div>
+        <div class="form-group">
+            <label>Start Year</label>
+            @Html.DropDownListFor(model => model.Start_Year, Model.ListStartYear, "-- Select Year --", new { @class = "col-l-6" })
+        </div>
+           
+        </div>
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label>End Month</label>
+            @Html.DropDownListFor(model => model.End_Month, Model.ListEndMonth, "-- Select Month --", new { @class = "col-l-6" })
+        </div>
+        <div class="form-group">
+            <label>End Year</label>
+            @Html.DropDownListFor(model => model.End_Year, Model.ListEndYear, "-- Select Year --", new { @class = "col-l-6" })
+        </div>
+
+        <button type="button" id="AddOrUpdateExperience" class="btn" style="background-color: #e066ff; color:#FFF;"> <span class="glyphicon glyphicon-book" aria-hidden="true"></span>  Add Work Experience </button>
+        <a href="@Url.Action("Education","Resume")" class="btn" style="position: relative; right: -50%; color:#FFF; background-color: #e066ff"> Next Step>> Education </a>
+    </div>
+</div>
+
