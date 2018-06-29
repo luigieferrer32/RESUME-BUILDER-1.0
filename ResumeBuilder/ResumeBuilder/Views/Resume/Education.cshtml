@@ -2,7 +2,12 @@
 @{
     ViewBag.Title = "Education";
 }
-
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <h2><b>Help employers better understand your background</b></h2>
+</head>
+</html>
 @{ Html.RenderAction("EducationPartial", "Resume"); }
 
 @section scripts {
@@ -19,7 +24,7 @@
                     School_Location: $('#School_Location').val(),
                     Field_Of_Study: $('#Field_Of_Study').val(),
                     Graduation_Year: $('#Graduation_Year').val(),
-                   
+
                 };
                 console.log(JSON.stringify(serializeModel));
 
@@ -40,7 +45,7 @@
 
 
 
-       
+
     </script>
 
     @Scripts.Render("~/bundles/jqueryval")

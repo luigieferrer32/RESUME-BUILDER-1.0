@@ -48,7 +48,7 @@ namespace ResumeBuilder.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                Mapper.Reset();
                 AutoMapper.Mapper.Initialize(cfg => cfg.CreateMap<PersonInfoVM, USER>()); USER userEntity = AutoMapper.Mapper.Map<USER>(person);
 
                 bool result = resumeRepo.AddPersonalInformation(userEntity);
