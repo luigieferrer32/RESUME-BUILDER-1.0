@@ -56,6 +56,7 @@ namespace ResumeBuilder.Controllers
                 if (result)
                 {
                     Session["IdSelected"] = resumeRepo.GetUserID(person.First_Name, person.Last_Name);
+                    ViewBag.Message("Personal Information added successfully");
                     return RedirectToAction("WorkExperience");
 
                 }

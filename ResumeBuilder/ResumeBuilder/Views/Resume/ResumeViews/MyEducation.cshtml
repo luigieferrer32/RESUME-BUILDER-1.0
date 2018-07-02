@@ -14,89 +14,43 @@
         background-color: #5cb85c;
     }
 </style>
-
-
-
-    @*<div class="row">
-        <div></div>
-        <div class="col-md-6">
-            @Html.EditorFor(model => model.School_Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Institute/University" } })
-            @Html.ValidationMessageFor(model => model.School_Name, "", new { @class = "text-danger" })
-        </div>
-
-        <div class="col-md-6">
-            @Html.EditorFor(model => model.School_Location, new { htmlAttributes = new { @class = "form-control", @placeholder = "Title Of Diploma" } })
-            @Html.ValidationMessageFor(model => model.School_Name, "", new { @class = "text-danger" })
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-
-            @Html.DropDownListFor(model => model.Degree, Model.ListofDegree, new { @class = "form-control" })
-
-        </div>
-
-    </div>
-    <div class="row">
-
-
-
-        <div class="col-md-5">
-            @Html.EditorFor(model => model.Field_Of_Study, new { htmlAttributes = new { @class = "form-control", @placeholder = "Field of Study" } })
-            @Html.ValidationMessageFor(model => model.Field_Of_Study, "", new { @class = "text-danger" })
-        </div>
-        <div class="col-xs-6">
-            @Html.EditorFor(model => model.Graduation_Year, new { htmlAttributes = new { @class = "form-control", @placeholder = "Graduation Year" } })
-            @Html.ValidationMessageFor(model => model.Graduation_Year, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-
-    <button type="button" id="AddOrUpdateEducation" class="btn" style="background-color: #e066ff; color:#FFF;"> <span class="glyphicon glyphicon-book" aria-hidden="true"></span>  Add Work Experience </button>
-
-    <a href="@Url.Action("SkiCerfLang","Resume")" class="btn" style="position: relative; right: -50%; color:#FFF; background-color: #e066ff"> Next Step>> Skills </a>*@
-
-
-
-
 <div class="container" style="outline-color:gray; outline-style:solid">
     <div class="row">
         <form role="form">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Tell us about your Education</strong></div>
-
+                
                 <div class="form-group">
                     <label for="InputName">School Name</label>
                     <div class="input-group">
-                        @Html.EditorFor(model => model.School_Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Institute/University" } })
-                        @*<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
-                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>*@
+                        @Html.EditorFor(model => model.School_Name, new { htmlAttributes = new { @class = "form-control col-md-12", @placeholder = "Institute/University" } })
+                       
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="InputEmail">Location</label>
                     <div class="input-group">
-                        @*<input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Email" required>*@
-                        @Html.EditorFor(model => model.School_Location, new { htmlAttributes = new { @class = "form-control", @placeholder = "Location" } })
+                       
+                        @Html.EditorFor(model => model.School_Location, new { htmlAttributes = new { @class = "form-control col-md-12", @placeholder = "Location" } })
                         @Html.ValidationMessageFor(model => model.School_Name, "", new { @class = "text-danger" })
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="InputEmail">Degree</label>
-                    <div class="input-group ">
-                        @Html.DropDownListFor(model => model.Degree, Model.ListofDegree, new { @class = "col-lg-auto" })
-                        @*<input type="email" class="form-control" id="InputEmailSecond" name="InputEmail" placeholder="Confirm Email" required>
-                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>*@
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="InputEmail">Degree</label>
+                        <div class="input-group ">
+                            @Html.DropDownListFor(model => model.Degree, Model.ListofDegree, new { @class = "input-large", @id = "ListofDegree" })
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="InputMessage">Field of the Study</label>
-                    <div class="input-group">
-                        @Html.EditorFor(model => model.Field_Of_Study, new { htmlAttributes = new { @class = "form-control", @placeholder = "Field of Study" } })
-                        @Html.ValidationMessageFor(model => model.Field_Of_Study, "", new { @class = "text-danger" })
-                        @*<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>*@
-                        <span class="input-group-addon"><span class="glyphicon "></span></span>
+                    <div class="form-group">
+                        <label for="InputMessage">Field of the Study</label>
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.Field_Of_Study, new { htmlAttributes = new { @class = "form-control col-md-12", @placeholder = "Field of Study" } })
+                            @Html.ValidationMessageFor(model => model.Field_Of_Study, "", new { @class = "text-danger" })
+                       
+
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -104,14 +58,13 @@
                     <div class="input-group ">
                         @Html.EditorFor(model => model.Graduation_Year, new { htmlAttributes = new { @class = "form-control", @placeholder = "Graduation Year" } })
                         @Html.ValidationMessageFor(model => model.Graduation_Year, "", new { @class = "text-danger" })
-                        @*<input type="email" class="form-control" id="InputEmailSecond" name="InputEmail" placeholder="Confirm Email" required>
-        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>*@
+                      
                     </div>
                 </div>
                  <button type="button" id="AddOrUpdateEducation" class="btn" style="background-color: #e066ff; color:#FFF;"> <span class="glyphicon glyphicon-book" aria-hidden="true"></span>  Add Work Experience </button>
 
     <a href="@Url.Action("SkiCerfLang","Resume")" class="btn" style="position: relative; right: -100%; color:#FFF; background-color: #e066ff"> Next Step>> Skills </a>
-                @*<input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info float-xs-right">*@
+                    
             </div>
         </form>
   

@@ -13,6 +13,19 @@
 @section scripts {
 
     <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#name option").filter(function () {
+                return $(this).val() == $("#firstname").val();
+            }).attr('selected', true);
+
+            $("#name").live("change", function () {
+
+                $("#firstname").val($(this).find("option:selected").attr("value"));
+            });
+        });
+
+
         //AddOrUpdate Education
 
         $('#AddOrUpdateEducation').on('click', function () {

@@ -7,7 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using Unity;
 using Unity.AspNet.Mvc;
-
+using ResumeBuilder.Controllers;
+using Unity.Injection;
 namespace ResumeBuilder.App_Start
 {
     public class Bootstrapper
@@ -27,7 +28,7 @@ namespace ResumeBuilder.App_Start
 
             //regitser all your components with the container here
             container.RegisterType<IResumeRepo, ResumeRepository>();
-
+            container.RegisterType<AccountController>(new InjectionConstructor());
             RegisterTypes(container);
             return container;
 
