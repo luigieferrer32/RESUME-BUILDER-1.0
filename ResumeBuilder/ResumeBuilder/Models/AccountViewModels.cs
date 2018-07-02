@@ -32,7 +32,7 @@ namespace ResumeBuilder.Models
         [Display(Name = "Code")]
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
-
+            
         [Display(Name = "Remember this browser?")]
         public bool RememberBrowser { get; set; }
 

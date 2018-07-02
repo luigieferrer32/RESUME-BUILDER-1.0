@@ -17,5 +17,6 @@ namespace ResumeBuilder.ViewModel
         public string Number { get; set; }
         public string ZipCode { get; set; }
         public string Email_Address { get; set; }
+        public string ID { get; set; }
     }
 }

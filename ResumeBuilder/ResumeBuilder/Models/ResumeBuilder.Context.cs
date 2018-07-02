@@ -27,8 +27,10 @@ namespace ResumeBuilder.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<EDUCATION> EDUCATIONs { get; set; }
         public virtual DbSet<SKILL> SKILLS { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<WORKEXPERIENCE> WORKEXPERIENCEs { get; set; }
     

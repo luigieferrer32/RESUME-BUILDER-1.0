@@ -26,10 +26,15 @@ namespace ResumeBuilder.Controllers
       
         // GET: Resume
         [HttpGet]
-        public ActionResult Resume( )
+        public ActionResult Resume()
         {
-
-            return View();
+          
+                string CurUserid = Session["CurUserid"].ToString();
+          
+          
+                Session["Userid"] = CurUserid;
+                return View();
+        
         }
 
         //public JsonResult UpdateAssistance(UserViewModel model)
@@ -48,15 +53,19 @@ namespace ResumeBuilder.Controllers
         {
             if (ModelState.IsValid)
             {
-                Mapper.Reset();
-                AutoMapper.Mapper.Initialize(cfg => cfg.CreateMap<PersonInfoVM, USER>()); USER userEntity = AutoMapper.Mapper.Map<USER>(person);
 
+                //person.ID = (string)Session["Userid"];
+                Mapper.Reset();
+                AutoMapper.Mapper.Initialize(cfg => cfg.CreateMap<PersonInfoVM, USER>());
+                USER userEntity = AutoMapper.Mapper.Map<USER>(person);
+                 userEntity.ID  = Session["Userid"].ToString();
                 bool result = resumeRepo.AddPersonalInformation(userEntity);
 
                 if (result)
                 {
                     Session["IdSelected"] = resumeRepo.GetUserID(person.First_Name, person.Last_Name);
-                    ViewBag.Message("Personal Information added successfully");
+                    
+                    //ViewBag.Message("Personal Information added successfully");
                     return RedirectToAction("WorkExperience");
 
                 }

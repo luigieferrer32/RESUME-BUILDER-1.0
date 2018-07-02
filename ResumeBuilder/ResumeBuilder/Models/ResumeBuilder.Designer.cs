@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Luigi\Documents\ResumeBuilder Back up\arron\ResumeBuilder\ResumeBuilder\Models\ResumeBuilder.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\Projects\RESUME-BUILDER-1.0\ResumeBuilder\ResumeBuilder\Models\ResumeBuilder.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

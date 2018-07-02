@@ -273,6 +273,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>ResumeBuilder.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\EDUCATION.cs">
       <DependentUpon>ResumeBuilder.tt</DependentUpon>
     </Compile>
@@ -302,6 +305,9 @@
     <Compile Include="Models\sp_helpdiagrams_Result.cs">
       <DependentUpon>ResumeBuilder.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>ResumeBuilder.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\USER.cs">
       <DependentUpon>ResumeBuilder.tt</DependentUpon>
     </Compile>
@@ -324,28 +330,28 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="css\admin.css" />
-    <Content Include="css\animate.css" />
-    <Content Include="css\aside.css" />
-    <Content Include="css\blog.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\cards.css" />
-    <Content Include="css\flexslider.css" />
-    <Content Include="css\forum.css" />
-    <Content Include="css\hero.css" />
-    <Content Include="css\icomoon.css" />
-    <Content Include="css\inbox.css" />
-    <Content Include="css\index.css" />
-    <Content Include="css\instaAlbum.css" />
-    <Content Include="css\kanban.css" />
-    <Content Include="css\landing.css" />
-    <Content Include="css\login.css" />
-    <Content Include="css\magnific-popup.css" />
-    <Content Include="css\owl.carousel.min.css" />
-    <Content Include="css\owl.theme.default.min.css" />
-    <Content Include="css\style.css" />
-    <Content Include="css\tabs.css" />
-    <Content Include="css\themify-icons.css" />
+    <Content Include="Properties\css\admin.css" />
+    <Content Include="Properties\css\animate.css" />
+    <Content Include="Properties\css\aside.css" />
+    <Content Include="Properties\css\blog.css" />
+    <Content Include="Properties\css\bootstrap.css" />
+    <Content Include="Properties\css\cards.css" />
+    <Content Include="Properties\css\flexslider.css" />
+    <Content Include="Properties\css\forum.css" />
+    <Content Include="Properties\css\hero.css" />
+    <Content Include="Properties\css\icomoon.css" />
+    <Content Include="Properties\css\inbox.css" />
+    <Content Include="Properties\css\index.css" />
+    <Content Include="Properties\css\instaAlbum.css" />
+    <Content Include="Properties\css\kanban.css" />
+    <Content Include="Properties\css\landing.css" />
+    <Content Include="Properties\css\login.css" />
+    <Content Include="Properties\css\magnific-popup.css" />
+    <Content Include="Properties\css\owl.carousel.min.css" />
+    <Content Include="Properties\css\owl.theme.default.min.css" />
+    <Content Include="Properties\css\style.css" />
+    <Content Include="Properties\css\tabs.css" />
+    <Content Include="Properties\css\themify-icons.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -456,6 +462,7 @@
     <Content Include="Models\ResumeBuilder.edmx.diagram">
       <DependentUpon>ResumeBuilder.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\ResumeBuilder20180702022532 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -528,6 +535,7 @@
     <Content Include="Views\Resume\WorkExperience.cshtml" />
     <Content Include="Views\Resume\ResumeViews\MyEducation.cshtml" />
     <Content Include="Views\Resume\Education.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

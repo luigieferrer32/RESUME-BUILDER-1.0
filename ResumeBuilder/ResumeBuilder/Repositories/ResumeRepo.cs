@@ -135,6 +135,14 @@ namespace DataAccess.Repositories
             return context.USERs.Find(idUser);
         }
 
+        public string GetUserIdbyEmail(string email)
+        {
+            string idSelected = context.AspNetUsers.Where(e => e.Email.ToLower().Equals(email.ToLower()))
+                                                            .Select(e => e.Id).FirstOrDefault();
+
+            return idSelected;
+        }
+
         public IQueryable<SKILL> GetSkillsById(int idPer)
         {
             var skillsList = context.SKILLS.Where(x => x.ID == idPer);
