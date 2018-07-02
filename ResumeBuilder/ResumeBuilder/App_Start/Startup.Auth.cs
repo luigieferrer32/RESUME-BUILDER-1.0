@@ -34,7 +34,7 @@ namespace ResumeBuilder
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
+            });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
@@ -54,14 +54,15 @@ namespace ResumeBuilder
             //   consumerKey: "",
             //   consumerSecret: "");
 
+
             app.UseFacebookAuthentication(
-               appId: "601945320175869",
-               appSecret: "7bd13d12b79152911062f220df2a5677");
+               appId: "1943290219067494",
+               appSecret: "83b6b042f1feb5ff7285be1b5e12919c");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "633318634038-271mtj9ltuequtaan0rel2p1phfk2usk.apps.googleusercontent.com",
-                ClientSecret = "f2dgSnYUfEJZD5KzolUqY29W"
+                ClientId = "633318634038-msd50o3aalteqanol8dohrjehehu881r.apps.googleusercontent.com",
+                ClientSecret = "iUQioq16MU8_13UVW0fQVTeM"
             });
         }
     }
